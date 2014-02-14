@@ -1,3 +1,4 @@
 *.pyc
 .ropeproject/
 bower_components/
+db.sqlite3

@@ -1,5 +1,16 @@
 {% extends 'layout.django.html' %}
 
 {% block content %}
-    <p>Hello there</p>
+
+    <p><strong>{{ message }}</strong></p>
+
+    <form method="POST" action="{% url 'hello' %}">{% csrf_token %}
+        <h2>Publisher</h2>
+        {{ publisher_form.as_p }}
+
+        <h2>Title</h2>
+        {{ title_form.as_p }}
+
+        <input type="submit" value="Submit">
+    </form>
 {% endblock %}
